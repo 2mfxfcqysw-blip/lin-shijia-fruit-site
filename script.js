@@ -19,6 +19,10 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-current-year]").forEach((element) => {
+    element.textContent = String(new Date().getFullYear());
+  });
+
   if (window.lucide) {
     window.lucide.createIcons();
   }
